@@ -1,0 +1,37 @@
+body {
+  font-family: Courier;
+  color: rgb(253, 253, 253);
+  font-size: 40px;
+  background-color: rgba(111, 110, 110, 0.844);
+  font-weight: bold;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid:
+    'myArea myArea . . .'
+    'myArea myArea . . .';
+  height: fit-content;
+  width: fit-content;
+  grid-gap: 10px;
+  background-color: black;
+  padding: 10px;
+  grid-template-columns: 40px 40px 40px 40px 40px;
+  justify-content: center;
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+}
+
+.grid-container>div {
+  background-color: rgba(111, 110, 110, 0.844);
+  width: 40px;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+  border: 1px solid #fff;
+}
