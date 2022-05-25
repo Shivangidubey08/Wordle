@@ -1,16 +1,18 @@
 <head>
     <meta charset="utf-8">
-    <link href="wordlecss.css">
+    <link rel="stylesheet" href="wordlecss.css">
+    <script src="wordle.js"></script>
     <title> Wordle😄</title>
 </head>
 <hr size="3" color="black" noshade="true">
+
 <body>
-    <div class="center">
-    <form action="/url" method="GET">
-        <input id="firstGuess" type="text" placeholder="Guess"><br>
-        <button type="button" onclick="checkWord()">Submit</button>
-    </form>
-    <div class="grid-container">
+    <div class="play-area">
+        <form action="/url" method="GET">
+            <input id="firstGuess" type="text" placeholder="Guess"><br>
+            <button type="button" onclick="checkWord()">Submit</button>
+        </form>
+        <div class="grid-container">
             <div class="grid-item" id="a">A</div>
             <div class="grid-item" id="b">B</div>
             <div class="grid-item" id="c">C</div>
@@ -37,8 +39,11 @@
             <div class="grid-item" id="x">X</div>
             <div class="grid-item" id="y">Y</div>
             <div class="grid-item" id="z">Z</div>
-      </div>
-      </div>
+        </div>   
+    </div>
+    <div class="previous-outer">
+        <div class="previous-inner">
+            <h6 id="previous" style="font-size: 15pt">Previous submissions</span></h6>
+        </div> 
+    </div>
 </body>
-<script src="wordle.js">
-</script>
