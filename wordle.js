@@ -1,5 +1,5 @@
 function checkWord() {
-    var enteredWord = document.getElementById("firstGuess").value;
+    var enteredWord = document.getElementById("firsttext").value;
     var correctWord = "palms";
     var outputColor = "BBBBB";
     for (let i = 0; i < 5; i++) {
@@ -20,36 +20,45 @@ function checkWord() {
         }
     }
     document.getElementById("previous").appendChild(document.createElement("br"));
+    var gridOutput = document.createElement("div");
+    gridOutput.classList.add("grid-container");
     for (let i = 0; i < 5; i++) {
         const idi = enteredWord[i];
         switch (outputColor[i]) {
             case 'G':
                 document.getElementById(idi).style.backgroundColor = "#006400";
-                var j=document.createElement("h3");
+                var j=document.createElement("div");
                 j.innerHTML=enteredWord[i];
                 j.style.backgroundColor="#006400";
                 j.style.display="inline"
-                document.getElementById("previous").appendChild(j);
+                j.classList.add("grid-item");
+                j.setAttribute("id",idi);
+                gridOutput.appendChild(j);
                 break;
             case 'Y':
                 if(document.getElementById(idi).style.backgroundColor!="G"){
                 document.getElementById(idi).style.backgroundColor = "#999900";}
-                var j=document.createElement("h3");
+                var j=document.createElement("div");
                 j.innerHTML=enteredWord[i];
                 j.style.backgroundColor="#999900";
                 j.style.display="inline"
-                document.getElementById("previous").appendChild(j);
+                j.classList.add("grid-item");
+                j.setAttribute("id",idi);
+                gridOutput.appendChild(j);
                 break;
             default:
                 document.getElementById(idi).style.backgroundColor = "black";
-                var j=document.createElement("h3");
+                var j=document.createElement("div");
                 j.innerHTML=enteredWord[i];
                 j.style.backgroundColor= "black";
                 j.style.display="inline"
-                document.getElementById("previous").appendChild(j);
+                j.classList.add("grid-item");
+                j.setAttribute("id",idi);
+                gridOutput.appendChild(j);
                 break;
         }
     }
+    document.getElementById("previous").appendChild(gridOutput);
 }
 function setCharAt(str, index, chr) {
      if (index > str.length - 1) return str;

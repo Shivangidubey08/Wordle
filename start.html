@@ -5,13 +5,15 @@
     <title> Wordle😄</title>
 </head>
 <hr size="3" color="black" noshade="true">
-
 <body>
-    <div class="play-area">
         <form action="/url" method="GET">
-            <input id="firstGuess" type="text" placeholder="Guess"><br>
-            <button type="button" onclick="checkWord()">Submit</button>
+            <input type="text" maxlength="5" id="firsttext"/><br>
+            <button type="button" class="" onclick="checkWord()">Guess</button>
         </form>
+        <div>
+            <div class="previous-sub">
+                <h6 id="previous" style="font-size: 20pt">Previous submissions</span></h6>
+            </div> 
         <div class="grid-container">
             <div class="grid-item" id="a">A</div>
             <div class="grid-item" id="b">B</div>
@@ -40,10 +42,5 @@
             <div class="grid-item" id="y">Y</div>
             <div class="grid-item" id="z">Z</div>
         </div>   
-    </div>
-    <div class="previous-outer">
-        <div class="previous-inner">
-            <h6 id="previous" style="font-size: 20pt">Previous submissions</span></h6>
-        </div> 
     </div>
 </body>
