@@ -1,46 +1,57 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="wordlecss.css">
-    <script src="wordle.js"></script>
+    <link rel="stylesheet" href="keyboard.css">
+   <!-- <script src="wordle.js"></script>-->
+    <script src="keyboard.js"></script>
+    <link rel="stylesheet" href="keyboard.css">
     <title> Wordle😄</title>
 </head>
 <hr size="3" color="black" noshade="true">
+
 <body>
-        <form action="/url" method="GET">
-            <input type="text" maxlength="5" id="firsttext"/><br>
-            <button type="button" class="" onclick="checkWord()">Guess</button>
-        </form>
-        <div>
-            <div class="previous-sub">
-                <h6 id="previous" style="font-size: 20pt">Previous submissions</span></h6>
-            </div> 
-        <div class="grid-container">
-            <div class="grid-item" id="a">A</div>
-            <div class="grid-item" id="b">B</div>
-            <div class="grid-item" id="c">C</div>
-            <div class="grid-item" id="d">D</div>
-            <div class="grid-item" id="e">E</div>
-            <div class="grid-item" id="f">F</div>
-            <div class="grid-item" id="g">G</div>
-            <div class="grid-item" id="h">H</div>
-            <div class="grid-item" id="i">I</div>
-            <div class="grid-item" id="j">J</div>
-            <div class="grid-item" id="k">K</div>
-            <div class="grid-item" id="l">L</div>
-            <div class="grid-item" id="m">M</div>
-            <div class="grid-item" id="n">N</div>
-            <div class="grid-item" id="o">O</div>
-            <div class="grid-item" id="p">P</div>
-            <div class="grid-item" id="q">Q</div>
-            <div class="grid-item" id="r">R</div>
-            <div class="grid-item" id="s">S</div>
-            <div class="grid-item" id="t">T</div>
-            <div class="grid-item" id="u">U</div>
-            <div class="grid-item" id="v">V</div>
-            <div class="grid-item" id="w">W</div>
-            <div class="grid-item" id="x">X</div>
-            <div class="grid-item" id="y">Y</div>
-            <div class="grid-item" id="z">Z</div>
-        </div>   
+    <form action="/url" method="GET">
+        <input type="text" maxlength="5" id="firsttext" /><br>
+        <button type="button" class="" onclick="checkWord()">Guess</button>
+    </form>
+    <div>
+        <div class="previous-sub">
+            <h6 id="previous" style="font-size: 20pt">Previous submissions</span></h6>
+        </div>
+        <div id="container">
+            <textarea id="write" rows="3" cols="60"></textarea>
+            <ul id="keyboard">
+                
+                <li class="delete lastitem">delete</li>
+                <li class="letter">q</li>
+                <li class="letter">w</li>
+                <li class="letter">e</li>
+                <li class="letter">r</li>
+                <li class="letter">t</li>
+                <li class="letter">y</li>
+                <li class="letter">u</li>
+                <li class="letter">i</li>
+                <li class="letter">o</li>
+                <li class="letter">p</li>
+                
+                <li class="letter">a</li>
+                <li class="letter">s</li>
+                <li class="letter">d</li>
+                <li class="letter">f</li>
+                <li class="letter">g</li>
+                <li class="letter">h</li>
+                <li class="letter">j</li>
+                <li class="letter">k</li>
+                <li class="letter">l</li>
+                <li class="return lastitem">return</li>
+                <li class="letter">z</li>
+                <li class="letter">x</li>
+                <li class="letter">c</li>
+                <li class="letter">v</li>
+                <li class="letter">b</li>
+                <li class="letter">n</li>
+                <li class="letter">m</li>
+            </ul>
+            </div>
     </div>
 </body>

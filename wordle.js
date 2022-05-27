@@ -27,33 +27,34 @@ function checkWord() {
         switch (outputColor[i]) {
             case 'G':
                 document.getElementById(idi).style.backgroundColor = "#006400";
-                var j=document.createElement("div");
-                j.innerHTML=enteredWord[i];
-                j.style.backgroundColor="#006400";
-                j.style.display="inline"
+                var j = document.createElement("div");
+                j.innerHTML = enteredWord[i];
+                j.style.backgroundColor = "#006400";
+                j.style.display = "inline"
                 j.classList.add("grid-item");
-                j.setAttribute("id",idi);
+                j.setAttribute("id", idi);
                 gridOutput.appendChild(j);
                 break;
             case 'Y':
-                if(document.getElementById(idi).style.backgroundColor!="G"){
-                document.getElementById(idi).style.backgroundColor = "#999900";}
-                var j=document.createElement("div");
-                j.innerHTML=enteredWord[i];
-                j.style.backgroundColor="#999900";
-                j.style.display="inline"
+                if (document.getElementById(idi).style.backgroundColor != "G") {
+                    document.getElementById(idi).style.backgroundColor = "#999900";
+                }
+                var j = document.createElement("div");
+                j.innerHTML = enteredWord[i];
+                j.style.backgroundColor = "#999900";
+                j.style.display = "inline"
                 j.classList.add("grid-item");
-                j.setAttribute("id",idi);
+                j.setAttribute("id", idi);
                 gridOutput.appendChild(j);
                 break;
             default:
                 document.getElementById(idi).style.backgroundColor = "black";
-                var j=document.createElement("div");
-                j.innerHTML=enteredWord[i];
-                j.style.backgroundColor= "black";
-                j.style.display="inline"
+                var j = document.createElement("div");
+                j.innerHTML = enteredWord[i];
+                j.style.backgroundColor = "black";
+                j.style.display = "inline"
                 j.classList.add("grid-item");
-                j.setAttribute("id",idi);
+                j.setAttribute("id", idi);
                 gridOutput.appendChild(j);
                 break;
         }
@@ -61,6 +62,6 @@ function checkWord() {
     document.getElementById("previous").appendChild(gridOutput);
 }
 function setCharAt(str, index, chr) {
-     if (index > str.length - 1) return str;
+    if (index > str.length - 1) return str;
     return str.substring(0, index) + chr + str.substring(index + 1);
 }
