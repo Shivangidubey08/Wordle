@@ -1,6 +1,6 @@
 function checkWord() {
-    var enteredWord = document.getElementById("firsttext").value;
-    var correctWord = "palms";
+    var enteredWord = document.getElementById("write").value;
+    var correctWord = "PALMS";
     var outputColor = "BBBBB";
     for (let i = 0; i < 5; i++) {
         if (enteredWord[i] == correctWord[i]) {
@@ -23,7 +23,7 @@ function checkWord() {
     var gridOutput = document.createElement("div");
     gridOutput.classList.add("grid-container");
     for (let i = 0; i < 5; i++) {
-        const idi = enteredWord[i];
+        const idi = toLower(enteredWord[i]);
         switch (outputColor[i]) {
             case 'G':
                 document.getElementById(idi).style.backgroundColor = "#006400";
@@ -64,4 +64,9 @@ function checkWord() {
 function setCharAt(str, index, chr) {
     if (index > str.length - 1) return str;
     return str.substring(0, index) + chr + str.substring(index + 1);
+}
+function toLower(char) {
+    var output = "";
+    output=output+(char[0]-'A'+'a');
+    return output;
 }

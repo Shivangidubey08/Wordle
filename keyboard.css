@@ -5,7 +5,7 @@
      
     body {
     font: 71%/1.5 Verdana, Sans-Serif;
-    background: #eee;
+    background: rgb(100, 99, 99);
     }
     
     .keyboard-center{
@@ -43,7 +43,7 @@
         height: 40px;
         line-height: 40px;
         text-align: center;
-        background: #fff;
+        background: rgb(28, 27, 27);
         border: 1px solid #f9f9f9;
         border-radius: 5px;    
         }
