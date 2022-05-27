@@ -16,14 +16,14 @@
     #container {
     margin: 100px auto;
     width: 688px;
-    width: 32%;
+    width: 40%;
     }
      
     #write {
     margin: 0 0 5px;
     padding: 5px;
-    width: 671px;
-    height: 200px;
+    width: 100px;
+    height: 20px;
     font: 1em/1.5 Verdana, Sans-Serif;
     background: #fff;
     border: 1px solid #f9f9f9;

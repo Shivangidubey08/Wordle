@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="utf-8">
+
+<head>
     <link rel="stylesheet" href="wordlecss.css">
     <script src="wordle.js"></script>
-
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
     <link rel="stylesheet" type="text/css" href="keyboard.css" />
-    <title> Wordle😄</title>
 </head>
 <hr size="3" color="black" noshade="true">
 
 <body>
+    <form action="/url" method="GET">
+        <textarea id="write" rows="1" cols="5"></textarea><br>
+        <button type="button" class="" onclick="checkWord()">Guess</button>
+    </form>
+    <div class="previous-sub">
+        <h6 id="previous" style="font-size: 20pt">Previous submissions</span></h6>
+    </div>
     <div id="container">
-        <textarea id="write" rows="6" cols="60"></textarea>
+        <!--<textarea id="write" rows="6" cols="60"></textarea>-->
         <ul id="keyboard" class="keyboard-center">
             <li class="letter">q</li>
             <li class="letter">w</li>
@@ -46,16 +53,10 @@
             <li class="return lastitem">Enter</li>
         </ul>
     </div>
-    <form action="/url" method="GET">
-        <input type="text" maxlength="5" id="firsttext" /><br>
-        <button type="button" class="" onclick="checkWord()">Guess</button>
-    </form>
-    
-    <div class="previous-sub">
-        <h6 id="previous" style="font-size: 20pt">Previous submissions</span></h6>
-    </div>
-    <script type="text/javascript" src="keyboard.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="keyboard.js"></script>
 </body>
+
 </html>
