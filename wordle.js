@@ -20,48 +20,32 @@ function checkWord() {
             }
         }
     }
-    //document.getElementById("previous").appendChild(document.createElement("br"));
-    var gridOutput = document.createElement("div");
-    gridOutput.classList.add("grid-container");
     for (let i = 0; i < 5; i++) {
         const idi = enteredLowerCase[i];
+        const rows=0;
+        const ind =(5*rows) + i+1;
+        var rowCol = ind.toString();
+        document.getElementById("previous").innerHTML=i+1;
         switch (outputColor[i]) {
             case 'G':
                 document.getElementById(idi).style.backgroundColor = "#006400";
-                var j = document.createElement("div");
-                j.innerHTML = enteredWord[i];
-                j.style.backgroundColor = "#006400";
-                j.style.display = "inline"
-                j.classList.add("grid-item");
-                j.setAttribute("id", idi);
-                gridOutput.appendChild(j);
+                document.getElementById(rowCol).innerHTML = enteredWord[i];
+                document.getElementById(rowCol).style.backgroundColor = "#006400";
                 break;
             case 'Y':
                 if (document.getElementById(idi).style.backgroundColor != "G") {
                     document.getElementById(idi).style.backgroundColor = "#999900";
                 }
-                var j = document.createElement("div");
-                j.innerHTML = enteredWord[i];
-                j.style.backgroundColor = "#999900";
-                j.style.display = "inline"
-                j.classList.add("grid-item");
-                j.setAttribute("id", idi);
-                gridOutput.appendChild(j);
+                document.getElementById(rowCol).innerHTML = enteredWord[i];
+                document.getElementById(rowCol).style.backgroundColor =  "#999900";
                 break;
             default:
-                document.getElementById(idi).style.backgroundColor = "black";
-                var j = document.createElement("div");
-                j.innerHTML = enteredWord[i];
-                j.style.backgroundColor = "black";
-                j.style.display = "inline"
-                j.classList.add("grid-item");
-                j.setAttribute("id", idi);
-                gridOutput.appendChild(j);
+                document.getElementById(idi).style.backgroundColor =  "black";
+                document.getElementById(rowCol).innerHTML = enteredWord[i];
+                document.getElementById(rowCol).style.backgroundColor =  "black";
                 break;
         }
     }
-    gridOutput.setAttribute("id","previous");
-    document.getElementById("previous").appendChild(gridOutput);
 }
 function setCharAt(str, index, chr) {
     if (index > str.length - 1) return str;

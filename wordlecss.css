@@ -18,6 +18,7 @@ body {
 
 .grid-container {
   display: grid;
+  background-color: black;
   grid:
     'myArea myArea . . .'
     'myArea myArea . . .';
@@ -31,7 +32,7 @@ body {
 }
 
 .grid-container>div {
-  background-color: rgba(111, 110, 110, 0.844);
+  background-color: rgba(51, 50, 50, 0.844);
   width: 40px;
   height: 7px;
   text-align: center;
