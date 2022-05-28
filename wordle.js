@@ -1,3 +1,4 @@
+var rows=0;
 function checkWord() {
     var enteredWord = document.getElementById("write").value;
     var correctWord = "PALMS";
@@ -22,10 +23,8 @@ function checkWord() {
     }
     for (let i = 0; i < 5; i++) {
         const idi = enteredLowerCase[i];
-        const rows=0;
         const ind =(5*rows) + i+1;
         var rowCol = ind.toString();
-        document.getElementById("previous").innerHTML=i+1;
         switch (outputColor[i]) {
             case 'G':
                 document.getElementById(idi).style.backgroundColor = "#006400";
@@ -46,6 +45,7 @@ function checkWord() {
                 break;
         }
     }
+    rows++;
 }
 function setCharAt(str, index, chr) {
     if (index > str.length - 1) return str;
