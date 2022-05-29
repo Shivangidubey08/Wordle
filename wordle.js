@@ -1,4 +1,4 @@
-var rows=0;
+var rows = 0;
 function checkWord() {
     var enteredWord = document.getElementById("write").value;
     var correctWord = "PALMS";
@@ -23,7 +23,7 @@ function checkWord() {
     }
     for (let i = 0; i < 5; i++) {
         const idi = enteredLowerCase[i];
-        const ind =(5*rows) + i+1;
+        const ind = (5 * rows) + i + 1;
         var rowCol = ind.toString();
         switch (outputColor[i]) {
             case 'G':
@@ -36,12 +36,12 @@ function checkWord() {
                     document.getElementById(idi).style.backgroundColor = "#999900";
                 }
                 document.getElementById(rowCol).innerHTML = enteredWord[i];
-                document.getElementById(rowCol).style.backgroundColor =  "#999900";
+                document.getElementById(rowCol).style.backgroundColor = "#999900";
                 break;
             default:
-                document.getElementById(idi).style.backgroundColor =  "black";
+                document.getElementById(idi).style.backgroundColor = "black";
                 document.getElementById(rowCol).innerHTML = enteredWord[i];
-                document.getElementById(rowCol).style.backgroundColor =  "black";
+                document.getElementById(rowCol).style.backgroundColor = "black";
                 break;
         }
     }
