@@ -1,24 +1,60 @@
 * {
-    margin: 0;
-    padding: 0;
+    align-items: center;
 }
 
 body {
     font: 71%/1.5 Verdana, Sans-Serif;
-    background: rgb(100, 99, 99);
+    background: rgb(57, 57, 57);
 }
 
-.keyboard-center {
+#keyboard-cont {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#keyboard-cont div {
+    display: flex;
+}
+
+.second-row {
+    margin: 0.5rem 0;
+}
+
+.letter {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.5rem;
+    margin: 0 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+    background: rgb(83, 82, 82);
+    border: 1px solid #f9f9f9;
+    border-radius: 5px;
+}
+
+#keyboard-cont button:hover {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    border-color: #e5e5e5;
+    cursor: pointer;
+    background: rgb(56, 56, 56);
+}
+
+/* .keyboard-center {
     align-items: center;
     align-self: center;
     align-content: center;
-}
-
-#container {
+  }
+  
+  #container {
     margin: 40px auto;
     width: 688px;
     width: 40%;
-}
+  } */
 
 #write {
     margin: 0 0 5px;
@@ -29,15 +65,16 @@ body {
     background: #fff;
     border: 1px solid #f9f9f9;
     border-radius: 5px;
+    text-transform: uppercase;
 }
 
-#keyboard {
+/* #keyboard {
     margin: 0;
     padding: 0;
     list-style: none;
-}
+  } */
 
-#keyboard li {
+/* #keyboard li {
     float: left;
     margin: 0 5px 5px 0;
     width: 40px;
@@ -47,56 +84,51 @@ body {
     background: rgb(28, 27, 27);
     border: 1px solid #f9f9f9;
     border-radius: 5px;
-}
+  } */
 
-.capslock,
-.tab,
-.left-shift {
-    clear: left;
-}
-
-#keyboard .tab,
-#keyboard .delete {
-    width: 70px;
-}
-
-#keyboard .capslock {
-    width: 80px;
-}
-
-#keyboard .return {
-    width: 77px;
-}
-
-#keyboard .left-shift {
-    width: 95px;
-}
-
-#keyboard .right-shift {
-    width: 109px;
-}
-
-.lastitem {
-    margin-right: 0;
-}
-
-.uppercase {
-    text-transform: uppercase;
-}
-
-#keyboard .space {
-    clear: left;
-    width: 681px;
-}
-
-.on {
-    display: none;
-}
-
-#keyboard li:hover {
+/* #keyboard li:hover {
     position: relative;
     top: 1px;
     left: 1px;
     border-color: #e5e5e5;
     cursor: pointer;
+  } */
+
+@media only screen and (max-width: 768px) {
+    #keyboard-cont {
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #keyboard-cont div {
+        display: flex;
+    }
+
+    .second-row {
+        margin: 0.4rem 0;
+    }
+
+    .letter {
+        font-size: 0.7rem;
+        font-weight: 400;
+        padding: 0.45rem;
+        margin: 0 2px;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: white;
+        background: rgb(83, 82, 82);
+        border: 1px solid #f9f9f9;
+        border-radius: 2px;
+    }
+
+    #keyboard-cont button:hover {
+        position: relative;
+        top: 1px;
+        left: 1px;
+        border-color: #e5e5e5;
+        cursor: pointer;
+        background: rgb(56, 56, 56);
+    }
 }

@@ -1,20 +1,20 @@
 $(function () {
-    var $write = $('#write');
-
-    $('#keyboard li').click(function () {
+    $('#keyboard-cont button').click(function () {
+        var $write = document.getElementById('write').value;
         var $this = $(this),
-            character = $this.html();
-
+            character = $this.html().toUpperCase();
+        console.log($write, character);
         // Delete
         if ($this.hasClass('delete')) {
-            var html = $write.html();
-
-            $write.html(html.substr(0, html.length - 1));
+            document.getElementById('write').value = $write.substr(
+                0,
+                $write.length - 1
+            );
             return false;
         }
-        if ($this.hasClass('return')) character = "\n";
+        if ($this.hasClass('enter')) character = '\n';
 
         // Add the character
-        $write.html($write.html() + character);
+        document.getElementById('write').value = $write + character;
     });
 });
