@@ -19,7 +19,7 @@ function checkWord() {
             for (let j = 0; j < 5; j++) {
                 if (enteredWord[i] == correctWord[j]) {
                     outputColor = setCharAt(outputColor, i, 'Y');
-                    correctWord = setCharAt(correctWord, i, '-');
+                    correctWord = setCharAt(correctWord, j, '-');
                     break;
                 }
             }
